@@ -1,0 +1,7 @@
+<div class="row all-hotels-list">
+  <div *ngFor="let hotel of allHotels$ | async" class="col-12 col-md-6 col-lg-4">
+    <b2-card [hotel]="hotel" [adminView]="ifSignedIn"></b2-card>
+  </div>
+</div>
+<b2-pagination *ngIf="(allHotelsNotPaged$ | async).length" [page]="activePage" [pageSize]="pageSize" [collectionSize]="(allHotelsNotPaged$ | async).length"></b2-pagination>
+<b2-page-not-found *ngIf="!(allHotelsNotPaged$ | async).length"></b2-page-not-found>

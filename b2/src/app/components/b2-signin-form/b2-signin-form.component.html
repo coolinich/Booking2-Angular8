@@ -1,0 +1,29 @@
+<form class="signin-form" [formGroup]="signInForm">
+  <mat-form-field>
+    <input matInput
+      type="text"
+      formControlName="userName"
+      placeholder="Enter user name"
+    >
+    <mat-error
+      *ngIf="signInForm.get('userName').hasError('minlength')">Length of username should be at least 5 symbols
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput
+      type="password"
+      formControlName="userPsw"
+      placeholder="Enter user password"
+    >
+    <mat-error
+      *ngIf="signInForm.get('userPsw').hasError('minlength')">Length of password should be at least 5 symbols
+    </mat-error>
+  </mat-form-field>
+  <span class="credentials-error" *ngIf="ifBadCredentials && !(signInForm.get('userName').touched || signInForm.get('userPsw').touched)">Username or password is incorrect. Please, enter valid credentials.</span>
+  <div mat-dialog-actions>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+      <button mat-button type="submit" [disabled]="!signInForm.valid"  (click)="onSubmit()"  cdkFocusInitial>Sign in</button>
+  </div>
+</form>
+
+

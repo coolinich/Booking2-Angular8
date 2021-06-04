@@ -1,0 +1,12 @@
+.select-price-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+mat-form-field {
+  width: 90px;
+}
+
+
+

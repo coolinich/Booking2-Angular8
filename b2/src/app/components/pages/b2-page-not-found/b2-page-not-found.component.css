@@ -1,0 +1,12 @@
+span {
+  font-weight: 500;
+}
+
+a.link-in-text {
+  text-decoration: none;
+  color: black;
+}
+
+a.link-in-text:hover {
+  color: #0056b3;
+}

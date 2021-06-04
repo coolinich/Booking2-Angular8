@@ -1,0 +1,9 @@
+<ng-container [formGroup]="categoriesGroup">
+  <div *ngFor="let item of (tmpTemplateArr | convertToArrayOfSize: maxCategory); let i = index">
+    <mat-checkbox  formControlName="{{i + 1}}">
+      <div class="stars">
+      <i class="material-icons md-24" *ngFor="let item of (tmpTemplateArr | convertToArrayOfSize: maxCategory); let j = index" [ngClass]="{'highlighted': j <= i }">grade</i>
+      </div>
+    </mat-checkbox>
+  </div>
+</ng-container>

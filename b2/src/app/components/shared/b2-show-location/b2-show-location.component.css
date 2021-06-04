@@ -1,0 +1,13 @@
+div.location-wrapper {
+  display: flex;
+}
+
+.show-full-location {
+  color: #696969;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+.location-icon {
+  color: #696969;
+}

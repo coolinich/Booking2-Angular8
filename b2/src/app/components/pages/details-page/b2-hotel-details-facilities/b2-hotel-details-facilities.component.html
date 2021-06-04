@@ -1,0 +1,44 @@
+<mat-card-subtitle>Property facilities</mat-card-subtitle>
+<div class="available-facilities">
+    <div class="facility-item" *ngIf="facilities.wifi">
+        <i class="material-icons md-24">wifi</i>
+        <span class="facility-title">WiFi</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.privateBathroom">
+        <i class="material-icons md-24">hot_tub</i>
+        <span class="facility-title">Private Bathroom</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.sharedBathroom">
+        <i class="material-icons md-24">bathtub</i>
+        <span class="facility-title">Shared Bathroom</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.hairdrier">
+        <img src="https://icongr.am/material/fan.svg?size=24&color=#696969">
+        <span class="facility-title">Hairdrier</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.patio">
+        <i class="material-icons md-24">beach_access</i>
+        <span class="facility-title">Patio</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.kitchen">
+        <i class="material-icons md-24">free_breakfast</i>
+        <span class="facility-title">Kitchen</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.parking">
+        <i class="material-icons md-24">local_parking</i>
+        <span class="facility-title">Parking</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.cableTV">
+        <i class="material-icons md-24">tv</i>
+        <span class="facility-title">Cable TV</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.workout">
+        <i class="material-icons md-24">fitness_center</i>
+        <span class="facility-title">Workout</span>
+    </div>
+    <div class="facility-item" *ngIf="facilities.airportShuttle">
+        <i class="material-icons md-24">airport_shuttle</i>
+        <span class="facility-title">Airport shuttle</span>
+    </div>
+</div>
+

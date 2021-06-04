@@ -1,0 +1,10 @@
+<div mat-dialog-content class="set-filter-by-propery-type-dialog">
+    <p>Select filter by prices</p>
+    <form class="select-property-type" [formGroup]="typesFilterForm">
+      <b2-select-type formControlName="selectedPropertyTypes"></b2-select-type>
+      <div mat-dialog-actions>
+        <button mat-button (click)="onCancelClick()">Cancel</button>
+        <button mat-button type="submit" [disabled]="typesFilterForm.invalid" (click)="onSubmit()" cdkFocusInitial>Apply</button>
+      </div>
+    </form>
+</div>

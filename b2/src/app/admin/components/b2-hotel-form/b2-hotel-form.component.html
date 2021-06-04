@@ -1,0 +1,26 @@
+<form [formGroup]="addHotelForm" class="add-hotel-form">
+    <b2-set-type formControlName="type"></b2-set-type>
+    <mat-form-field>
+      <input matInput  type="text" formControlName="title" placeholder="Enter title of new property">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput  type="text" formControlName="shortDescription" placeholder="Enter short description of new property">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput  formControlName="fullDescription" placeholder="Enter full description of new property here"></textarea>
+    </mat-form-field>
+    <b2-set-location formControlName="location"></b2-set-location>
+    <mat-form-field>
+      <input matInput  type="text" formControlName="address" placeholder="Enter address of new property">
+    </mat-form-field>
+  <b2-set-category formControlName="category"></b2-set-category>
+  <mat-form-field>
+    <input matInput  type="number" formControlName="price" placeholder="Enter price (per night) of new property">
+  </mat-form-field>
+  <b2-set-facilities *ngIf="ifEditMode === true" formControlName="facilities" [availableFacilities]="hotel.facilities"></b2-set-facilities>
+  <b2-set-facilities *ngIf="ifEditMode === false" formControlName="facilities" [availableFacilities]="{}"></b2-set-facilities>
+  <mat-form-field>
+    <input matInput  type="text" formControlName="img" placeholder="Select image of new property">
+  </mat-form-field>
+  <button mat-button type="submit" [disabled]="!addHotelForm.valid" (click)="onSubmit()">Submit</button>
+</form>

@@ -1,0 +1,7 @@
+<ng-container [formGroup]="facilitiesGroup">
+  <div class="property-types-wrapper" formArrayName="facilitiesArray">
+    <div *ngFor="let facility of allAvailableFacilities; let i=index">
+      <mat-checkbox  formControlName="{{i}}"> {{ facility | titlecase }}</mat-checkbox>
+    </div>
+  </div>
+</ng-container>

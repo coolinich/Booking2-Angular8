@@ -1,0 +1,6 @@
+<mat-form-field>
+  <mat-select placeholder="Select country" [formControl]="locationName">
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let country of countries$ | async" [value]="country">{{ country }}</mat-option>
+  </mat-select>
+</mat-form-field>

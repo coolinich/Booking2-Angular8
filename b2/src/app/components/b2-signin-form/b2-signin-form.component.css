@@ -1,0 +1,9 @@
+.credentials-error {
+  display: block;
+  font-size: 13px;
+  color: red;
+}
+
+mat-form-field {
+  margin-bottom: 20px;
+}

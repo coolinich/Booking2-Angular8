@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="text-wrapper text-center text-white bg-secondary font-weight-bolder">
+      <span>You are signed in as administrator. Now you can add and edit properties or visit <a class="link-in-text" routerLink="/all-hotels">catalog of all hotels</a>
+      </span>
+  </div>
+  <nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let linkItem of tabLinks"
+      (click)="activeLink = linkItem.link"
+      [routerLink]="linkItem.path"
+      [active]="activeLink == linkItem.link"> {{ linkItem.link }}
+    </a>
+  </nav>
+</div>
+<router-outlet></router-outlet>
+<p-toast></p-toast>

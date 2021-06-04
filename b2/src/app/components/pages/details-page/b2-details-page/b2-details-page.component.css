@@ -1,0 +1,11 @@
+mat-card {
+  margin: 10px 0;
+}
+
+mat-card-subtitle {
+  margin-top: 10px!important;
+}
+
+mat-card-actions button {
+  width: 100%;
+}

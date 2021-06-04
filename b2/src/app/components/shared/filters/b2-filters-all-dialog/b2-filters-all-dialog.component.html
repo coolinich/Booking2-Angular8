@@ -1,0 +1,18 @@
+<!-- <div mat-dialog-content> -->
+    <!-- <p class="text-center">Filter available properties</p> -->
+    <form [formGroup]="allFiltersForm">
+      <div mat-dialog-content class="set-all-filters-form">
+        <b2-select-location formControlName="selectedCountry"></b2-select-location>
+        <span class="filter-title">Filter by price range</span>
+        <b2-select-price formControlName="selectedPriceRange"></b2-select-price>
+        <span class="filter-title">Filter by type of property</span>
+        <b2-select-type formControlName="selectedPropertyTypes" class="mr-auto"></b2-select-type>
+        <span class="filter-title">Filter by category of property</span>
+        <b2-select-category formControlName="selectedCategories" class="mr-auto"></b2-select-category>
+      </div>
+      <mat-dialog-actions align="end">
+        <button mat-button type="button" (click)="onCancelClick()">Cancel</button>
+        <button mat-button type="submit" [disabled]="allFiltersForm.invalid" (click)="onSubmit()" cdkFocusInitial>Apply</button>
+      </mat-dialog-actions>
+    </form>
+<!-- </div> -->

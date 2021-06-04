@@ -1,0 +1,4 @@
+<a mat-button routerLink="/admin"><i class="material-icons">keyboard_arrow_left</i> Back to administration page</a>
+<div class="container">
+  <b2-hotel-form [ifEditMode]="true" *ngIf="hotel$ | async as hotel" [hotel]="hotel"></b2-hotel-form>
+</div>

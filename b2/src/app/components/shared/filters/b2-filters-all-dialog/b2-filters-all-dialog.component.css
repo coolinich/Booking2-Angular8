@@ -1,0 +1,16 @@
+.set-all-filters-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  max-height: 85vh;
+}
+
+.filter-title {
+  color: #696969;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-size: .85rem;
+}
+
+

@@ -1,0 +1,24 @@
+<ng-container [formGroup]="propertiesGroup">
+  <div class="property-types-wrapper" formArrayName="propertiesArray" *ngFor="let type of propertiesArray.controls; let i=index">
+    <!-- <div *ngFor="let type of propertiesArray.controls; let i=index"> -->
+      <div [formGroupName]="i">
+          <mat-checkbox  formControlName="state" [checked]="propertiesArray.controls[i].controls.state.value"> {{ propertiesArray.controls[i].controls.label.value | titlecase }}</mat-checkbox>
+          <!-- <input formControlName="state" type="checkbox" [id]="propertiesArray.controls[i].controls.label.value" [name]="propertiesArray.controls[i].controls.label.value"
+          [checked]="propertiesArray.controls[i].controls.state.value">
+          <label [for]="propertiesArray.controls[i].controls.label.value">{{ propertiesArray.controls[i].controls.label.value | titlecase }}</label> -->
+          <!-- <p>{{ propertiesArray.controls[i].controls.label.value }}</p> -->
+      </div>
+    <!-- </div> -->
+  </div>
+</ng-container>
+
+
+
+<!-- <ng-container [formGroup]="propertiesGroup">
+  <div class="property-types-wrapper" formArrayName="propertiesArray">
+    <div *ngFor="let type of availablePropertiesTypes$ | async; let i=index">
+      <mat-checkbox  formControlName="{{i}}"> {{ type | titlecase }}</mat-checkbox>
+    </div>
+  </div>
+</ng-container> -->
+

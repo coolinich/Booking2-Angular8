@@ -1,0 +1,18 @@
+<form class="book-hotel-form" [formGroup]="bookHotelForm" class="book-form">
+  <b2-select-dates-range formControlName="datesRange"></b2-select-dates-range>
+  <mat-form-field>
+    <input matInput  type="text" formControlName="userFirstName" placeholder="Enter your first name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput  type="text" formControlName="userSecondName" placeholder="Enter your second name">
+  </mat-form-field>
+  <div mat-dialog-actions>
+      <button mat-button (click)="onCancelClick()">Cancel</button>
+      <button mat-button
+        type="submit"
+        [disabled]="!bookHotelForm.valid"
+        cdkFocusInitial
+        (click)="onSubmit()"
+      >Confirm booking</button>
+  </div>
+</form>

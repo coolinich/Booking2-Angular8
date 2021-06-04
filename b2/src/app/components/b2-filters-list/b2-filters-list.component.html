@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light filters">
+  <button mat-button (click)="openAllFiltersDialog()"  class="navbar-toggler" type="button" data-toggle="collapse"   aria-expanded="false" aria-label="Toggle filters navigation">
+      <span class="navbar-toggler-filters">Filters</span>
+    </button>
+  <div class="collapse navbar-collapse" id="navbarNavFilters">
+    <div class="navbar-nav">
+      <button mat-raised-button [color]="toggleBtnLocationColor ? 'accent' : 'primary'" (click)="openFilterByLocationDialog()">Location</button>
+      <button mat-raised-button [color]="toggleBtnStarsColor ? 'accent' : 'primary'" (click)="openFilterByStarsDialog()">Stars</button>
+      <button mat-raised-button [color]="toggleBtnTypeColor ? 'accent' : 'primary'" (click)="openFilterByTypeDialog()">Property type</button>
+      <button mat-raised-button [color]="toggleBtnPriceColor ? 'accent' : 'primary'" (click)="openFilterByPriceDialog()" >Price</button>
+    </div>
+  </div>
+</nav>

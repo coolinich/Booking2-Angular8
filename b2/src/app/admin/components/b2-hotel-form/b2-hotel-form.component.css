@@ -1,0 +1,5 @@
+.add-hotel-form, .about-hotel-group, .select-property-type, .full-address-group, .select-facilities {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}

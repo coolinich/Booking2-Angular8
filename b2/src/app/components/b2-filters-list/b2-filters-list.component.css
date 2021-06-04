@@ -1,0 +1,21 @@
+.input-full-width {
+  width: 100%;
+}
+
+nav.filters {
+  justify-content: flex-start;
+  border-bottom: 1px solid darkgray;
+}
+
+.filters button + button {
+  margin-left: 10px;
+}
+
+button:focus, input:focus {
+  outline: none;
+  border: 1px solid rgb(248, 249, 250);
+}
+
+#navbarNavFilters {
+  padding-left: 40px;
+}

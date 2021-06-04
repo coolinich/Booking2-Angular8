@@ -1,0 +1,15 @@
+<mat-card [id]="hotel.id" (click)="navigateToDetails()">
+  <mat-card-content>
+      <mat-card-title>{{ hotel.title }}</mat-card-title>
+      <mat-card-subtitle> {{ hotel.shortDescription }} </mat-card-subtitle>
+      <img mat-card-image [src]="hotel.img">
+      <b2-show-location [location]="hotel.location" [address]="hotel.address"></b2-show-location>
+      <div class="hotel-price"> {{ hotel.price | currency }} </div>
+      <b2-hotel-details-category [category]="hotel.category"></b2-hotel-details-category>
+  </mat-card-content>
+  <!-- <mat-card-actions *ngIf="adminView">
+    <button mat-icon-button>
+        <i class="material-icons">edit</i>
+    </button>
+  </mat-card-actions> -->
+</mat-card>

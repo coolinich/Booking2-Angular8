@@ -1,0 +1,8 @@
+<ngb-pagination
+class="d-flex justify-content-center align-self-end"
+[boundaryLinks]="true"
+[(page)]="page"
+[pageSize]="pageSize"
+[collectionSize]="collectionSize"
+(pageChange)="onPageChanged($event)"
+></ngb-pagination>

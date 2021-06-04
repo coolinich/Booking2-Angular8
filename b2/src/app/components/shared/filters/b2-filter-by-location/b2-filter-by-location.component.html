@@ -1,0 +1,17 @@
+<div mat-dialog-content class="set-filter-by-location-dialog">
+    <p>Select filter by location</p>
+    <form>
+      <b2-select-location [formControl]="locationFilterForm"></b2-select-location>
+      <div mat-dialog-actions>
+        <button mat-button (click)="onCancelClick()">Cancel</button>
+        <button
+          mat-button
+          type="submit"
+          [disabled]="locationFilterForm.invalid"
+          (click)="onSubmit()"
+          cdkFocusInitial>
+          Apply
+        </button>
+      </div>
+    </form>
+</div>

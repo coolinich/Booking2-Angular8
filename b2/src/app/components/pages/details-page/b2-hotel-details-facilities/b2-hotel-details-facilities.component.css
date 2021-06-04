@@ -1,0 +1,8 @@
+.facility-item {
+  display: flex;
+  align-items: center;
+}
+
+.facility-item span {
+  margin-left: 20px;
+}

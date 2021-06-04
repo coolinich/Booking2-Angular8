@@ -1,0 +1,12 @@
+<ng-container [formGroup]="priceRangeGroup" class="select-price-form">
+  <mat-form-field>
+    <input matInput type="number" formControlName="minPrice" placeholder="Min price" min=
+    "0" max="30000" [attr.min]=
+    "'0'" [attr.max]="'30000'">
+  </mat-form-field>
+  <span> - </span>
+  <mat-form-field>
+    <input matInput type="number" formControlName="maxPrice" placeholder="Max price" [attr.min]=
+    "'0'" [attr.max]="'30000'">
+  </mat-form-field>
+</ng-container>

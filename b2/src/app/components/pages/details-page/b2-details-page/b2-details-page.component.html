@@ -1,0 +1,32 @@
+<div class="container">
+  <b2-hotel-details-back-to-catalog></b2-hotel-details-back-to-catalog>
+  <div *ngIf="hotel$ | async as hotel">
+      <mat-card [id]="hotel.id">
+          <div class="row">
+            <mat-card-title-group class="col-12">
+              <mat-card-title>{{ hotel.title }}</mat-card-title>
+              <mat-card-subtitle> {{ hotel.shortDescription }} </mat-card-subtitle>
+            </mat-card-title-group>
+            <img mat-card-image class="col-12 col-lg-8" [src]="hotel.img">
+            <div class="card-content-wrapper col-12 col-lg-4">
+              <mat-card-content>
+                <div class="hotel-description"> {{ hotel.fullDescription }} </div>
+                <mat-card-subtitle>Property address</mat-card-subtitle>
+                <b2-show-location [location]="hotel.location" [address]="hotel.address"></b2-show-location>
+                <div class="hotel-price"> {{ hotel.price | currency }} </div>
+                <b2-show-type [propertyType]="hotel.type"></b2-show-type>
+                <b2-hotel-details-category [category]="hotel.category"></b2-hotel-details-category>
+                <b2-hotel-details-facilities [facilities]="hotel.facilities"></b2-hotel-details-facilities>
+              </mat-card-content>
+              <mat-card-actions>
+                  <button mat-button color="accent" (click)="openBookDialog()">Book now!</button>
+              </mat-card-actions>
+            </div>
+
+            <!-- <mat-card-footer></mat-card-footer> -->
+
+          </div>
+        </mat-card>
+  </div>
+  <p-toast></p-toast>
+</div>

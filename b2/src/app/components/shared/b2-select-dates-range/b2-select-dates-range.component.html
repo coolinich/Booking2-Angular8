@@ -1,0 +1,13 @@
+<ng-container [formGroup]="datesRange">
+  <mat-form-field class="date-field">
+    <input matInput [min]="minDateStart" [matDatepicker]="pickerStart" placeholder="Start date" formControlName="startDate">
+    <mat-datepicker-toggle matSuffix [for]="pickerStart"></mat-datepicker-toggle>
+    <mat-datepicker #pickerStart></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field class="date-field">
+    <input matInput [min]="minDateEnd" [matDatepicker]="pickerEnd" placeholder="End date" formControlName="endDate">
+    <mat-datepicker-toggle matSuffix [for]="pickerEnd"></mat-datepicker-toggle>
+    <mat-datepicker #pickerEnd></mat-datepicker>
+  </mat-form-field>
+  <mat-error *ngIf="err != null"> {{ err?.invalidForm.message }}</mat-error>
+</ng-container>

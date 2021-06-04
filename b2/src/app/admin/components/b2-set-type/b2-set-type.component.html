@@ -1,0 +1,6 @@
+<mat-form-field>
+  <mat-select placeholder="Select property type" [formControl]="availablePropertiesTypes">
+    <mat-option>None</mat-option>
+    <mat-option *ngFor="let propertyType of availablePropertiesTypes$ | async" [value]="propertyType">{{ propertyType | titlecase }}</mat-option>
+  </mat-select>
+</mat-form-field>

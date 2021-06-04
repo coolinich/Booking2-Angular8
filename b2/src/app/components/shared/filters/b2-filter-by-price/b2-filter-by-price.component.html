@@ -1,0 +1,18 @@
+<div mat-dialog-content class="set-filter-by-prices-dialog">
+    <p>Select filter by prices</p>
+    <form class="price-range">
+      <b2-select-price [formControl]="priceRangeFilterForm" [priceRange]="priceRangeFilterValues"></b2-select-price>
+      <div mat-dialog-actions>
+        <button mat-button (click)="onCancelClick()">Cancel</button>
+        <button
+          mat-button
+          type="submit"
+          [disabled]="priceRangeFilterForm.invalid"
+          (click)="onSubmit()"
+          cdkFocusInitial>
+          Apply
+        </button>
+      </div>
+    </form>
+</div>
+
